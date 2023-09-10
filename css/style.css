@@ -281,14 +281,28 @@ Down
 .title {
   color: #68818c;
 }
-.output {
+[data-testid="myTrack"],
+[data-testid="githubURL"],
+[data-testid="myTrack"] {
   color: #334750;
   font-weight: 700;
+  margin: 0;
 }
 [data-testid="currentUTCTime"] {
   color: #334750;
   font-weight: 700;
   font-size: 20px;
+}
+[data-testid="slackUserName"],
+[data-testid="currentDayOfTheWeek"] {
+  color: #334750;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+[data-testid="slackDisplayImage"] {
+  max-width: 150px;
+  border-radius: 10px;
 }
 
 .pCard_card .pCard_back a i {
