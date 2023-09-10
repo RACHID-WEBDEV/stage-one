@@ -26,7 +26,7 @@
           <h2>Adeyemo Rasheed</h2>
           <p font>Frontend Developer</p>
         </div>
-        <div class="pCard_add">
+        <div class="pCard_add" title="Click Here">
           <i class="fa fa-plus notifier"></i>
           <span class="notifierdiv"></span>
         </div>
@@ -36,8 +36,8 @@
         <div>
           <p>GitHub</p>
           <p data-testid="githubURL">
-            <a target="_blank" href="https://gitHub.com/RACHID-WEBDEV"
-              >Rachid</a
+            <a target="_blank" href="https://github.com/RACHID-WEBDEV/stage-one"
+              >Host Repo</a
             >
           </p>
         </div>
@@ -47,7 +47,7 @@
         </div>
         <div>
           <p>Today</p>
-          <p data-testid="currentDayOfTheWeek">Loading...</p>
+          <p data-testid="currentDayOfTheWeek"></p>
         </div>
       </div>
       <div class="pCard_back">
@@ -62,24 +62,29 @@
             Slack Name:
             <span class="output" style="font-size: 20px">RACHID</span>
           </h4>
-          <!-- <div class="flex-element">
-            <p>Current Day of the Week:</p>
-            <p data-testid="currentDayOfTheWeek">Loading...</p>
-          </div> -->
           <div class="flex-element-col">
-            <p class="title">Current UTC Time</p>
-            <p data-testid="currentUTCTime">Loading...</p>
+            <p class="title">Current UTC Time in Milliseconds</p>
+            <p data-testid="currentUTCTime"></p>
           </div>
-          <!-- <p data-testid="myTrack">Track:Frontend</p> -->
+          <div class="flex-element">
+            <p class="margin-zero title">Track:</p>
+            <p class="margin-zero output" data-testid="myTrack">
+              Frontend Track
+            </p>
+          </div>
+          <div class="flex-element">
+            <p class="margin-zero title">GitHub URL:</p>
 
-          <!-- <p data-testid="githubURL">
-            GitHub URL:
-            <a target="_blank" href="https://gitHub.com/RACHID-WEBDEV"
-              >RACHID</a
+            <a
+              data-testid="githubURL"
+              class="output"
+              target="_blank"
+              href="https://github.com/RACHID-WEBDEV/stage-one"
+              >Repository</a
             >
-          </p> -->
+          </div>
         </div>
-        <p style="margin-bottom: 2px">Feel Free To Reach Out To Me</p>
+        <!-- <p style="margin-bottom: 2px">Feel Free To Reach Out To Me</p>
 
         <a target="_blank" href="https://web.facebook.com/olamiderasheed/"
           ><i class="fa fa-facebook fa-2x fa-fw"></i
@@ -91,7 +96,7 @@
           ><i class="fa fa-twitter fa-2x fa-fw"></i
         ></a>
 
-        <p>Follow Me!</p>
+        <p>Follow Me!</p> -->
       </div>
     </div>
 
