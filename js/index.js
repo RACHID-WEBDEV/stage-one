@@ -22,21 +22,22 @@ document.addEventListener("DOMContentLoaded", function () {
     "Friday",
     "Saturday",
   ];
-  const today = new Date().getDay();
-  const currentDay = daysOfWeek[today];
-
-  // Update the element with the current day of the week
   const currentDayElement = document.querySelector(
     '[data-testid="currentDayOfTheWeek"]'
   );
-  currentDayElement.textContent = currentDay;
+  const timeElem = document.querySelector('[data-testid="currentUTCTime"]');
 
-  // Get the current UTC time
-  const currentTime = new Date().toUTCString();
-
-  // Update the element with the current UTC time
-  const currentUTCTimeElement = document.querySelector(
-    '[data-testid="currentUTCTime"]'
-  );
-  currentUTCTimeElement.textContent = currentTime;
+  const setValue = (elem, val) => {
+    elem.innerHTML = val;
+  };
+  setValue(currentDayElement, daysOfWeek[new Date().getUTCDay()]);
+  window.setInterval(() => {
+    setValue(currentDayElement, daysOfWeek[new Date().getUTCDay()]);
+  }, 60000);
+  const timer = () => {
+    window.setInterval(() => {
+      setValue(timeElem, Date.now());
+    }, 100);
+  };
+  timer();
 });
