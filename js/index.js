@@ -22,22 +22,25 @@ document.addEventListener("DOMContentLoaded", function () {
     "Friday",
     "Saturday",
   ];
-  const currentDayElement = document.querySelector(
+
+  const currentDayElements = document.querySelectorAll(
     '[data-testid="currentDayOfTheWeek"]'
   );
-  const timeElem = document.querySelector('[data-testid="currentUTCTime"]');
+  const timeElements = document.querySelectorAll(
+    '[data-testid="currentUTCTime"]'
+  );
 
   const setValue = (elem, val) => {
     elem.innerHTML = val;
   };
-  setValue(currentDayElement, daysOfWeek[new Date().getUTCDay()]);
-  window.setInterval(() => {
-    setValue(currentDayElement, daysOfWeek[new Date().getUTCDay()]);
-  }, 60000);
-  const timer = () => {
+
+  currentDayElements.forEach(function (element) {
+    setValue(element, daysOfWeek[new Date().getUTCDay()]);
+  });
+
+  timeElements.forEach(function (element) {
     window.setInterval(() => {
-      setValue(timeElem, Date.now());
+      setValue(element, Date.now());
     }, 100);
-  };
-  timer();
+  });
 });
